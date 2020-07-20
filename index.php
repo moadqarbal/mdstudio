@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>MD Phoenix</title>
 
-    <link rel="stylesheet" href="css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/hover.css">
-    <link rel="stylesheet" href="css/imagehover.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/hover.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/imagehover.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/animate.css">
+    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/main.css">
 </head>
 
 <body>
