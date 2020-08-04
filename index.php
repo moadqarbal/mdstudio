@@ -1,99 +1,4 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, user-scalable=no,
-          initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>MD Phoenix</title>
-
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/fontawesome-all.min.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/bootstrap.min.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/hover.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/imagehover.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/animate.css">
-    <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/main.css">
-</head>
-
-<body>
-
-    <!-- header -->
-    <header class="m-fixed-nav">
-        <nav class="navbar navbar-expand-lg navbar fixed-top py-3 navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="#">
-                    <img src="img/logo.png" alt="logo" class="logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Accueil
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                A propos
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Actualités
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Albums
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Nos Services
-                            </a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">
-                                Contact
-                            </a>
-                        </li>
-                    </ul>
-
-                    <ul class="navbar-nav ml-auto social-media-navbar">
-                        <li class="nav-item mx-1">
-                            <a class="nav-link" target="_blank" href="https://www.facebook.com/moadthemes/">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-1">
-                            <a class="nav-link" target="_blank" href="http://www.instagram.com">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-1">
-                            <a class="nav-link" target="_blank" href="https://wa.me/212656360919">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-1">
-                            <a class="nav-link" target="_blank" href="mailto:mo3ad@gmail.com?subject=Welcome">
-                                <i class="fab fa-google"></i>
-                            </a>
-                        </li>
-                        <li class="nav-item mx-1">
-                            <a class="nav-link" target="_blank" href="http://www.linkedin.com">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
+<?php get_header() ?>
 
     <!-- blog-page section -->
     <section class="blog-page py-5">
@@ -108,53 +13,85 @@
             </div>
 
             <div class="row">
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/900" class="card-img w-100" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+
+	            <?php
+
+	            $slug1 = 'slider';
+	            $slug2 = 'gallery';
+	            $cat1 = get_category_by_slug($slug1);
+	            $cat2 = get_category_by_slug($slug2);
+	            $id1 = $cat1->term_id;
+	            $id2 = $cat2->term_id;
+
+	            $args_blog = array(
+		            'post_type' => 'post',
+		            'post_status' => 'publish',
+		            'category__not_in' => array( $id1,$id2 ),
+		            'posts_per_page' => 9,
+		            'order'=> 'DESC'
+	            );
+	            $blog = new WP_Query( $args_blog );
+	            ?>
+
+                <?php if ($blog->have_posts()): ?>
+	                <?php while ($blog->have_posts()): $blog->the_post() ?>
+                        <div class="col-md-12">
+                            <div class="card mb-3">
+                                <div class="row no-gutters">
+                                    <div class="col-md-4">
+                                        <a href="<?php the_permalink() ?>">
+		                                    <?php if(has_post_thumbnail()): ?>
+			                                    <?php the_post_thumbnail('blog-thumb',array('class'=>'card-img w-100')) ?>
+		                                    <?php else: ?>
+                                                <img src="https://via.placeholder.com/900" class="card-img w-100">
+		                                    <?php endif; ?>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">
+                                                <a href="<?php the_permalink() ?>"
+                                                   class="title-3 text-dark text-capitalize">
+		                                            <?php the_title() ?>
+                                                </a>
+                                            </h5>
+                                            <p class="card-text">
+	                                            <?php echo excerpt(17) ?>
+                                            </p>
+                                            <p class="card-text">
+                                                <small class="text-muted">
+                                                    <span class="date"><?php the_date() ?> <?php the_time() ?> Par :</span>
+                                                    <a class="author" href="<?php echo get_author_posts_url(get_the_author_meta('ID')); ?>"><?php the_author() ?></a>
+                                                </small>
+                                            </p>
+
+                                            <div class="post-categories mt-3">
+		                                        <?php
+		                                        $categories = get_the_category();
+		                                        $separator = " ";
+		                                        $output = '';
+
+		                                        if($categories){
+			                                        foreach($categories as $category){
+				                                        $output .= '<a class="post-category badge badge-pill py-2 px-3
+                                 mr-1                   badge-dark" href="'.get_category_link($category->term_id).'">'.$category->cat_name .'</a>'. $separator;
+			                                        }
+		                                        }
+		                                        echo trim($output, $separator);
+		                                        ?>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/900" class="card-img w-100" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-12">
-                    <div class="card mb-3">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="https://via.placeholder.com/900" class="card-img w-100" alt="...">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Card title</h5>
-                                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+	                <?php endwhile; ?>
+	            <?php else: ?>
+                    <?php echo wpautop('No Posts Yet!'); ?>
+                <?php endif; ?>
+
+                <div class="md-pagination d-flex justify-content-center py-3 my-4">
+		            <?php md_pagination() ?>
                 </div>
             </div>
 
@@ -162,57 +99,4 @@
     </section>
 
 
-
-    <!-- footer section -->
-    <footer class="footer bg-dark text-white py-5 ">
-        <div class="container ">
-            <div class="row mt-4 ">
-                <div class="col text-center ">
-                    <h2 class="pb-4 ">
-                        <a class="font-weight-bold " href="# ">
-                            <img src="img/logo-white.png " class="footer-logo " alt="logo ">
-                        </a>
-                    </h2>
-                    <p class="text-footer ">
-                        <i class="fas mr-1 fa-map-marker "></i> Adresse exemple Adresse exemple </p>
-                    <p class="text-footer ">
-                        <i class="fas mr-1 fa-envelope "></i> <a href="mailto:info@example.com ">info@example.com</a> </p>
-                    <p class="text-footer ">
-                        <i class="fas mr-1 fa-phone "></i> +212 000000000
-                    </p>
-
-                    <div class="footer-social-media my-5 ">
-                        <a href="# " class="text-white mx-2 ">
-                            <i class="fab fa-facebook fa-3x "></i>
-                        </a>
-                        <a href="# " class="text-white mx-2 ">
-                            <i class="fab fa-instagram fa-3x "></i>
-                        </a>
-                        <a href="# " class="text-white mx-2 ">
-                            <i class="fab fa-pinterest-square fa-3x "></i>
-                        </a>
-                        <a href="# " class="text-white mx-2 ">
-                            <i class="fab fa-twitter-square fa-3x "></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-
-
-
-
-    <script src="js/jquery.min.js "></script>
-    <script src="js/popper.min.js "></script>
-    <script src="js/bootstrap.min.js "></script>
-    <script src="js/wow.min.js "></script>
-    <script>
-        new WOW().init();
-    </script>
-    <script src="js/lightbox.js "></script>
-    <script src="js/html5shiv.min.js "></script>
-</body>
-
-</html>
+<?php get_footer() ?>
