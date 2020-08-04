@@ -227,6 +227,141 @@ header .social-media-navbar i {
     text-decoration: none;
 }
 
+.related-posts img,
+.related-posts .card-body
+{
+    height: 160px !important;
+}
+
+
+/*-------- Comments list -----------*/
+
+.comment-counts
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: #999999;
+    margin-top: 0;
+    text-decoration: underline;
+}
+
+
+.comments-list ul,
+.comments-list ol
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comments-list .comment img
+{
+    padding: 3px;
+    border: 1px solid #CCCCCC;
+    background: #ffffff;
+    margin-bottom: 5px;
+    margin-right: 5px;
+}
+
+.comments-list .comment .says
+{
+    display: none;
+}
+
+.comments-list .comment .comment-meta
+{
+    color: #9d9d9d;
+    font-size: 12px;
+}
+
+.comments-list .comment p
+{
+    color: #656565;
+    margin-top: 8px;
+}
+
+.comments-list .comment-reply-link
+{
+    padding: 3px 15px;
+    background: var(--main-color);
+    color: white;
+    display: inline-block;
+    border: 1px solid var(--main-color);
+    transition: all 0.1s ease-in-out;
+}
+
+.comments-list .comment-reply-link:hover
+{
+    background: var(--main-color);
+    border: 1px solid var(--main-color);
+    text-decoration: none;
+}
+
+.comments-list > .comment /*  level 1 selector  */
+{
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    margin-bottom: 15px;
+}
+
+.comments-list > .comment  > .children > .comment /*  level 2 selector child comment  */
+{
+    padding: 10px;
+    background: #EEEEEE;
+    margin-top: 10px;
+    border: 1px solid #CCCCCC;
+}
+
+.comments-list > .comment  > .children > .comment .comment
+    /*  level 3 selector childs child comment */
+{
+    padding: 10px;
+    background: #dddddd;
+    margin-top: 10px;
+    border: 1px solid #aaaaaa;
+}
+
+.comment-respond label
+{
+    display: block;
+}
+
+.comment-respond .comment-reply-title
+{
+    display: block;
+    padding: 15px 0;
+    margin-bottom: 30px;
+}
+
+.comments-box .submit
+{
+    padding: 12px 50px;
+    background: var(--main-color);
+    color: #ffffff;
+    border: 1px solid var(--main-color);
+    font-size: 21px;
+    transition: all 0.4s ease-in-out;
+}
+
+.comments-box .submit:hover
+{
+    background: #ffffff;
+    color: var(--main-color);
+    border: 1px solid var(--main-color);
+    font-size: 21px;
+}
+
+.comments-box input,
+.comments-box textarea
+{
+    border-radius: 0;
+}
+
+
+/*-------- end Comments list -----------*/
+
+
 footer .footer-logo {
     width: 270px;
     height: 60px;
