@@ -50,36 +50,36 @@
         <?php endwhile; ?>
     <?php endif; ?>
 
-    <section class="related-posts">
+    <section class="related-posts mb-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="mb-4">Articles Similaires</h2>
                 </div>
 
-	            <?php
+				<?php
 
-	            $related = new WP_Query(
-		            array(
-			            'category__in' => wp_get_post_categories($post->ID),
-			            'numberposts' => 4,
-			            'post__not_in' => array($post->ID)
-		            )
-	            );
-	            ?>
+				$related = new WP_Query(
+					array(
+						'category__in' => wp_get_post_categories($post->ID),
+						'numberposts' => 4,
+						'post__not_in' => array($post->ID)
+					)
+				);
+				?>
 
-	            <?php if ($related->have_posts()): ?>
-		            <?php while ($related->have_posts()): $related->the_post() ?>
+				<?php if ($related->have_posts()): ?>
+					<?php while ($related->have_posts()): $related->the_post() ?>
                         <div class="col-md-6 col-sm-12">
                             <div class="card mb-3">
                                 <div class="row no-gutters">
                                     <div class="col-md-4">
                                         <a href="<?php the_permalink() ?>">
-								            <?php if(has_post_thumbnail()): ?>
-									            <?php the_post_thumbnail('blog-thumb-related',array('class'=>'card-img-related w-100')) ?>
-								            <?php else: ?>
+											<?php if(has_post_thumbnail()): ?>
+												<?php the_post_thumbnail('blog-thumb-related',array('class'=>'card-img-related w-100')) ?>
+											<?php else: ?>
                                                 <img src="https://via.placeholder.com/900" class="card-img-related w-100">
-								            <?php endif; ?>
+											<?php endif; ?>
                                         </a>
                                     </div>
                                     <div class="col-md-8">
@@ -87,12 +87,12 @@
                                             <p class="card-title">
                                                 <a href="<?php the_permalink() ?>"
                                                    class="title-3 text-dark text-capitalize">
-										            <?php the_title() ?>
+													<?php the_title() ?>
                                                 </a>
                                             </p>
                                             <p class="card-text text-muted">
-									            <small>
-										            <?php echo excerpt(17) ?>
+                                                <small>
+													<?php echo excerpt(17) ?>
                                                 </small>
                                             </p>
 
@@ -101,10 +101,10 @@
                                 </div>
                             </div>
                         </div>
-		            <?php endwhile; ?>
-	            <?php else: ?>
-		            <?php echo wpautop('No Posts Yet!'); ?>
-	            <?php endif; ?>
+					<?php endwhile; wp_reset_postdata(); ?>
+				<?php else: ?>
+					<?php echo wpautop('No Posts Yet!'); ?>
+				<?php endif; ?>
             </div>
         </div>
     </section>
@@ -114,12 +114,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="comments-box">
-				        <?php  comments_template();  ?>
+				        <?php comments_template();  ?>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+
+
 
 
 <?php get_footer() ?>

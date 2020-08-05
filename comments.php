@@ -24,18 +24,18 @@ if(comments_open())
 	$comment_form = array(
 		'fields' => array(
 			'author' => '<div class="form-group">
-							<label>Votre Nom et Prenom </label>
+							<label>Nom et Prenom </label>
 							<input id="author" name="author" size="30"
 							 maxlength="245" required="required" class="form-control" type="text">
 						</div>',
 			'email' => '<div class="form-group">
-							<label>Votre Email </label>
+							<label>Email </label>
 							<input id="email" name="email" size="30"
 							 maxlength="100" aria-describedby="email-notes"
 							 required="required" class="form-control" type="text">
 						</div>',
 			'url' => '<div class="form-group">
-							<label>Votre site web </label>
+							<label>Votre siteweb </label>
 							<input id="url" name="url" 
 							 size="30" maxlength="200" class="form-control" type="text">
 						</div>',
@@ -54,5 +54,5 @@ if(comments_open())
 
 }else
 {
-	echo 'comments are closed';
+	echo 'les commentaires sont fermés';
 }

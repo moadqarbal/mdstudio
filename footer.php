@@ -7,7 +7,7 @@
                     <h2 class="pb-4 ">
 	                    <?php if(get_theme_mod('logo_white') != '') : ?>
                             <a class="font-weight-bold " href="<?php echo esc_url(home_url('/')); ?>">
-                                <img src="<?php echo esc_url( get_theme_mod( 'logo_white' ) ); ?>" alt="<?php bloginfo('name') ?>" class="wow bounceInDown footer-logo" data-wow-offset="350" data-wow-delay="0.3s">
+                                <img src="<?php echo esc_url( get_theme_mod( 'logo_white' ) ); ?>" alt="<?php bloginfo('name') ?>" class="wow bounceInDown footer-logo" data-wow-offset="50" data-wow-delay="0.3s">
                             </a>
 	                    <?php else: ?>
                             <a class="font-weight-bold " href="<?php echo esc_url(home_url('/')); ?>">

@@ -32,7 +32,7 @@
     <!-- search form -->
     <div class="search-zone">
         <i class="fas fa-times fa-3x close-search text-white"></i>
-        <form method="get" action="<?php esc_url(home_url('/')); ?>" class="text-center">
+        <form method="get" action="<?php echo esc_url(get_bloginfo('url')); ?>" class="text-center">
             <input type="text" autofocus placeholder="press enter after typing " name="s"
                 class="search-input" autocomplete="off">
         </form>

@@ -114,6 +114,8 @@ function md_pagination( \WP_Query $wp_query = null, $echo = true ) {
 /*---------- pagination ----------------*/
 
 
+
+
 /*---------- widgets -------------------*/
 
 function md_sidebar($id)
