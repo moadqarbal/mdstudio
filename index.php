@@ -6,7 +6,7 @@
 
             <div class="row">
                 <div class="col text-center py-3 mb-5">
-                    <h1 class="text-uppercase d-inline">
+                    <h1 class="text-uppercase d-inline main-color">
                         Actualités
                     </h1>
                 </div>
@@ -93,8 +93,10 @@
                     <?php echo wpautop('No Posts Yet!'); ?>
                 <?php endif; ?>
 
-                <div class="md-pagination d-flex justify-content-center py-3 my-4">
-		            <?php md_pagination() ?>
+                <div class="col-md-12">
+                    <div class="md-pagination d-flex justify-content-center py-3 my-4">
+			            <?php md_pagination() ?>
+                    </div>
                 </div>
             </div>
 

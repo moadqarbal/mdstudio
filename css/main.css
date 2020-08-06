@@ -403,6 +403,48 @@ header .social-media-navbar i {
 /*-------- search  -----------*/
 
 
+/*------- pagination ---------------*/
+
+
+.md-pagination nav
+{
+    margin: 0 auto;
+    border-radius: 0;
+}
+
+.md-pagination nav ul li a
+{
+    padding: 12px 16px;
+}
+
+.md-pagination .page-item.active .page-link
+{
+    color: #fff;
+    background-color: var(--main-color);
+    border-color: var(--main-color);
+    border-radius: 0;
+}
+
+.md-pagination .page-link
+{
+    color: var(--main-color);
+    border-radius: 0;
+}
+
+.page-item:last-child .page-link {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.page-item:first-child .page-link {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/*------- pagination ---------------*/
+
+
+
 footer .footer-logo {
     width: 270px;
     height: 60px;

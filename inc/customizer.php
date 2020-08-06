@@ -259,7 +259,7 @@
 
 		// About p Txt Control
 		$wp_customize->add_control( 'about_p', array(
-			'label'    => __('About p', 'md-studio'),
+			'label'    => __('About paragraph', 'md-studio'),
 			'section'  => 'about_page_paragraph',
 			'priority' => 3,
 		));
@@ -805,6 +805,31 @@
 
 		/*---------------------------------------------------------------------------------*/
 
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About paragraph Section
+		$wp_customize->add_section('our_services_page_paragraph', array(
+			'title'          => __('Our Services Page Paragraph', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 80,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// About p Txt Setting
+		$wp_customize->add_setting('services_p', array(
+			'default'              => _x('test', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// About p Txt Control
+		$wp_customize->add_control( 'services_p', array(
+			'label'    => __('Our Sevices Paragraph', 'md-studio'),
+			'section'  => 'our_services_page_paragraph',
+			'priority' => 3,
+		));
 
 
 	}

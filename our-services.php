@@ -15,14 +15,11 @@
 				</h1>
 			</div>
 		</div>
-
 		<div class="row">
 			<div class="col text-center">
 				<div class="our-services-page-text py-5">
 					<p class="lead text-muted">
-						Le jour de son mariage est un jour unique où se succèdent des instants furtifs de joie et de bonheur intenses. C’est une journée qu’on ne vit qu’une fois... donc Il est important de faire appel à un vrai professionnel pour immortaliser ces moments précieux,
-						un photographe professionnel à votre écoute, qui saura mettre son savoir-faire et sa bonne humeur au service de votre mémoire, mettre en évidence la profondeur des émotions ressenties ce jour-là. Pour celà Labo Photos Phenix
-						donne des services pour garder en mémoires les meilleurs moments de ce jour.
+						<?php echo get_theme_mod('services_p') ?>
 					</p>
 				</div>
 			</div>
