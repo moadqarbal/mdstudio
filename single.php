@@ -29,7 +29,7 @@
 
                     <div class="col-md-12 my-4">
                         <div class="tags">
-                            <h3>Les Tags</h3>
+                            <h3 class="main-color">Les Tags</h3>
                             <div class="tags mt-4">
 		                        <?php
 		                        if ( is_singular() ) :
@@ -54,7 +54,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <h2 class="mb-4">Articles Similaires</h2>
+                    <h2 class="mb-4 main-color">Articles Similaires</h2>
                 </div>
 
 				<?php

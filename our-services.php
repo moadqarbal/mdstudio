@@ -10,7 +10,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col text-center py-3">
-				<h1 class="text-uppercase d-inline">
+				<h1 class="text-uppercase d-inline main-color">
 					NOS SERVICES
 				</h1>
 			</div>

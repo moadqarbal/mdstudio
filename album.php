@@ -10,7 +10,7 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center py-3 mb-5">
-                    <h1 class="text-uppercase d-inline">
+                    <h1 class="text-uppercase d-inline main-color">
                         Albums
                     </h1>
                 </div>
@@ -44,9 +44,6 @@
                                         </a>
                                     </h4>
                                     <p class="card-text"><?php echo excerpt(15) ?></p>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted"><?php the_date() ?></small>
                                 </div>
                             </div>
                         </div>

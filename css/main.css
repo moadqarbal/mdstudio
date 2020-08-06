@@ -1,14 +1,20 @@
-/*@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);*/
-
 body,
 html {
     overflow-x: hidden
 }
 
 body {
-    font-family: Lato, sans-serif;
+
     font-weight: 500;
-    font-size: 16px;
+    font-size: 17px;
+}
+
+.main-color{
+    color: var(--main-color);
+}
+
+.main-bg{
+    background: var(--main-color);
 }
 
 .admin-bar .md-header {
@@ -79,6 +85,27 @@ header .navbar a {
     text-transform: uppercase;
 }
 
+.nav-link
+{
+    color: #606060 !important;
+}
+
+header .dropdown-menu a:hover
+{
+    background: #eeeeee;
+    color: var(--main-color);
+}
+
+header .nav-link
+{
+    transition: 0.2s all ease-in-out;
+}
+
+header .nav-link:hover
+{
+    color: var(--main-color) !important;
+}
+
 header .social-media-navbar i {
     font-size: 22px;
 }
@@ -120,8 +147,9 @@ header .social-media-navbar i {
 .about-us h2,
 .about-page h1,
 .our-services-page h1,
+.blog-page h1,
 .album-page h1 {
-    border-bottom: 4px solid #111;
+    border-bottom: 4px solid var(--main-color);
 }
 
 
@@ -135,6 +163,7 @@ header .social-media-navbar i {
 
 .about-us .btn {
     border-radius: 30px;
+    color: #f8f9fa;
 }
 
 .our-services-page .our-services-lists .main-icon {
@@ -392,5 +421,5 @@ footer .text-footer a {
 footer .footer-social-media a:hover {
     transition: all 0.3s ease-in-out;
     text-decoration: none;
-    color: #999 !important;
+    color: var(--main-color) !important;
 }

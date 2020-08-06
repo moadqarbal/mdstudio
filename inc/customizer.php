@@ -251,16 +251,54 @@
 
 		/*----------------------------------------------------------------------*/
 
-		// Instagram Txt Setting
+		// About p Txt Setting
 		$wp_customize->add_setting('about_p', array(
 			'default'              => _x('test', 'md-studio'),
 			'type'                 => 'theme_mod'
 		));
 
-		// Instagram Txt Control
+		// About p Txt Control
 		$wp_customize->add_control( 'about_p', array(
 			'label'    => __('About p', 'md-studio'),
 			'section'  => 'about_page_paragraph',
+			'priority' => 3,
+		));
+
+
+		/*---------------------------------------------------------------------------------*/
+		// Font Section
+		$wp_customize->add_section('font_import', array(
+			'title'          => __('Change font', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (Fonts)', 'md-studio')
+			),
+			'priority'       => 25,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// font css url Setting
+		$wp_customize->add_setting('font_css_url', array(
+			'default'              => _x('<style>@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);</style>', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// font css url Control
+		$wp_customize->add_control( 'font_css_url', array(
+			'label'    => __('Import Css :', 'md-studio'),
+			'section'  => 'font_import',
+			'priority' => 3,
+		));
+
+		// font name Setting
+		$wp_customize->add_setting('font_family', array(
+			'default'              => _x('font-family: Lato', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// font name Control
+		$wp_customize->add_control( 'font_family', array(
+			'label'    => __('Font Name :', 'md-studio'),
+			'section'  => 'font_import',
 			'priority' => 3,
 		));
 

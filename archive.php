@@ -4,7 +4,7 @@
 		<div class="container">
 			<div class="row search-posts">
 				<div class="col-md-12">
-					<h1 class="border-left-title pl-4 my-4">
+					<h1 class="border-left-title pl-4 my-4 main-color">
 						<?php
 						if(is_category()){
 							single_cat_title();

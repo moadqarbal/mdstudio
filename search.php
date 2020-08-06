@@ -4,7 +4,7 @@
         <div class="container">
             <div class="row search-posts">
                 <div class="col-md-12">
-                    <h1 class="border-left-title pl-4 my-4">
+                    <h1 class="border-left-title main-color pl-4 my-4">
                         mot clé : "<?php echo $_GET['s'] ?>"
                     </h1>
                 </div>

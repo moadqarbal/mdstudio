@@ -61,7 +61,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col text-center">
-                    <h2 class="d-inline py-2 mb-5">Nos Services</h2>
+                    <h2 class="d-inline py-2 mb-5 main-color">Nos Services</h2>
                 </div>
             </div>
             <div class="row mt-4">
@@ -79,7 +79,7 @@
         <div class="container">
             <div class="row mb-5">
                 <div class="col text-center">
-                    <h2 class="d-inline py-2 mb-5">Gallery</h2>
+                    <h2 class="d-inline py-2 mb-5 main-color">Gallerie</h2>
                 </div>
             </div>
         </div>
@@ -120,7 +120,7 @@
                 </div>
                 <div class="col-md-8 my-3">
                     <div class="about-us-text wow bounceInRight" data-wow-offset="350" data-wow-delay="0.3s">
-                        <h2 class="d-inline py-2 mb-5 ">QUI SOMME</h2>
+                        <h2 class="d-inline py-2 mb-5 main-color">QUI SOMME</h2>
 
 
                         <p class="lead mt-5 text-weight-bold">
@@ -131,7 +131,7 @@
 		                    <?php echo get_theme_mod('about_paragraph','At Labo, quality is an essential point, present in each stage of the processing of your photos and your creations (printing, packaging, monitoring of your order)'); ?>
                         </p>
 
-                        <a href="<?php echo get_theme_mod('about_link'); ?>" class="btn btn-lg btn-dark mt-5 py-2 px-4 ">En Savoir Plus</a>
+                        <a href="<?php echo get_theme_mod('about_link'); ?>" class="btn btn-lg main-bg mt-5 py-2 px-4 ">En Savoir Plus</a>
                     </div>
 
                 </div>

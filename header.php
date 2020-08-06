@@ -15,9 +15,15 @@
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/imagehover.css">
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/animate.css">
     <link rel="stylesheet" href="<?php echo esc_url(get_template_directory_uri());  ?>/css/main.css">
+
+	<?php echo get_theme_mod('font_css_url', '<style>@import url(https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap);</style>'); ?>
+
     <style>
         :root {
             --main-color:<?php echo get_theme_mod('color', '#ff6800'); ?>
+        }
+        body{
+            <?php echo get_theme_mod('font_family', 'font-family: Lato'); ?>;
         }
 
         header .custom-logo
