@@ -134,19 +134,18 @@ function md_sidebar($id)
 		)
 	);
 
-	// footer about widget
+	// About paragraph
 	register_sidebar(
 		array(
-			'name' => 'footer about',
-			'id' => 'footer-about',
-			'before_widget' => '<div class="col-md-3 col-lg-4 col-xl-3 mb-4">',
-			'before_title' => '<h4 class="text-white">',
-			'after_title' => '</h4>
-				<hr class="mb-2 mt-0 d-inline-block mx-auto w-25">',
-			'after_widget' => '</div>',
+			'name' => 'Our Services Page',
+			'id' => 'our-services',
+			'before_widget' => '<div class="col-md-6">
+				<div class="our-services-lists py-3">',
+			'before_title' => '<h4 class="text-uppercase mb-3"><i class="fas fa-camera main-icon mr-1"></i>',
+			'after_title' => '</h4>',
+			'after_widget' => '</div></div>',
 		)
 	);
-
 
 }
 

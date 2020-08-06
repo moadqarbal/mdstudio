@@ -18,15 +18,18 @@
 
 	            $slug1 = 'slider';
 	            $slug2 = 'gallery';
+	            $slug3 = 'album';
 	            $cat1 = get_category_by_slug($slug1);
 	            $cat2 = get_category_by_slug($slug2);
+	            $cat3 = get_category_by_slug($slug3);
 	            $id1 = $cat1->term_id;
 	            $id2 = $cat2->term_id;
+	            $id3 = $cat3->term_id;
 
 	            $args_blog = array(
 		            'post_type' => 'post',
 		            'post_status' => 'publish',
-		            'category__not_in' => array( $id1,$id2 ),
+		            'category__not_in' => array( $id1,$id2,$id3 ),
 		            'posts_per_page' => 9,
 		            'order'=> 'DESC'
 	            );

@@ -110,7 +110,7 @@
 		/*---------------------------------------------------------------------------------*/
 		// Front-about Section
 		$wp_customize->add_section('front_about', array(
-			'title'          => __('About Section', 'md-studio'),
+			'title'          => __('Homepage About Section', 'md-studio'),
 			'description'    => sprintf( __('Options for about section photo and texts', 'md-studio')
 			),
 			'priority'       => 50
@@ -175,7 +175,7 @@
 		/*---------------------------------------------------------------------------------*/
 		// Footer contact info Section
 		$wp_customize->add_section('contact_info', array(
-			'title'          => __('Contact informations', 'md-studio'),
+			'title'          => __('Contact informations (Footer)', 'md-studio'),
 			'description'    => sprintf( __('Options for MD Theme', 'md-studio')
 			),
 			'priority'       => 60,
@@ -241,12 +241,430 @@
 
 
 		/*---------------------------------------------------------------------------------*/
+		// About paragraph Section
+		$wp_customize->add_section('about_page_paragraph', array(
+			'title'          => __('About Us Paragraph', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 65,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('about_p', array(
+			'default'              => _x('test', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'about_p', array(
+			'label'    => __('About p', 'md-studio'),
+			'section'  => 'about_page_paragraph',
+			'priority' => 3,
+		));
+
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 1 infos Section
+		$wp_customize->add_section('about_page_infos1', array(
+			'title'          => __('About Us Profile informations 1', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 70,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person1', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person1_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos1',
+			'settings'          => 'person1',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person1_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person1_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos1',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt1', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt1', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos1',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt1', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt1', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos1',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 2 infos Section
+		$wp_customize->add_section('about_page_infos2', array(
+			'title'          => __('About Us Profile informations 2', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 72,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person2', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person2_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos2',
+			'settings'          => 'person2',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person2_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person2_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos2',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt2', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt2', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos2',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt2', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt2', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos2',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 3 infos Section
+		$wp_customize->add_section('about_page_infos3', array(
+			'title'          => __('About Us Profile informations 3', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 74,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person3', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person3_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos3',
+			'settings'          => 'person3',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person3_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person3_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos3',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt3', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt3', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos3',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt3', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt3', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos3',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 4 infos Section
+		$wp_customize->add_section('about_page_infos4', array(
+			'title'          => __('About Us Profile informations 4', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 76,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person4', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person4_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos4',
+			'settings'          => 'person4',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person4_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person4_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos4',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt4', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt4', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos4',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt4', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt4', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos4',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 5 infos Section
+		$wp_customize->add_section('about_page_infos5', array(
+			'title'          => __('About Us Profile informations 5', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 78,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person5', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person5_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos5',
+			'settings'          => 'person5',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person5_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person5_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos5',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt5', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt5', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos5',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt5', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt5', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos5',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+		/*---------------------------------------------------------------------------------*/
+		// About profile 6 infos Section
+		$wp_customize->add_section('about_page_infos6', array(
+			'title'          => __('About Us Profile informations 6', 'md-studio'),
+			'description'    => sprintf( __('Options for MD Theme (About)', 'md-studio')
+			),
+			'priority'       => 80,
+		));
+
+		/*----------------------------------------------------------------------*/
+
+		// Add Settings
+		$wp_customize->add_setting('person6', array(
+			'transport'         => 'refresh',
+			'height'         => 325,
+		));
+
+		// Add Controls
+		$wp_customize->add_control( new WP_Customize_Image_Control( $wp_customize, 'person6_control', array(
+			'label'             => __('Person Photo', 'md-studio'),
+			'section'           => 'about_page_infos6',
+			'settings'          => 'person6',
+		)));
+
+		// Full Name Txt Setting
+		$wp_customize->add_setting('person6_name', array(
+			'default'              => _x('Jhon Doe', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Full Name Txt Control
+		$wp_customize->add_control( 'person6_name', array(
+			'label'    => __('Full Name', 'md-news'),
+			'section'  => 'about_page_infos6',
+			'priority' => 1,
+		));
+
+		// Facebook Txt Setting
+		$wp_customize->add_setting('facebook_txt6', array(
+			'default'              => _x('facebook.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Facebook Txt Control
+		$wp_customize->add_control( 'facebook_txt6', array(
+			'label'    => __('Facebook', 'md-studio'),
+			'section'  => 'about_page_infos6',
+			'priority' => 2,
+		));
+
+		// Instagram Txt Setting
+		$wp_customize->add_setting('instagram_txt6', array(
+			'default'              => _x('instagram.com', 'md-studio'),
+			'type'                 => 'theme_mod'
+		));
+
+		// Instagram Txt Control
+		$wp_customize->add_control( 'instagram_txt6', array(
+			'label'    => __('Instagram', 'md-studio'),
+			'section'  => 'about_page_infos6',
+			'priority' => 3,
+		));
+		/*---------------------------------------------------------------------------------*/
+
+
+		/*---------------------------------------------------------------------------------*/
 		// Map Section
 		$wp_customize->add_section('map_section', array(
 			'title'          => __('Map URL', 'md-news'),
 			'description'    => sprintf( __('Options for MD Theme', 'md-news')
 			),
-			'priority'       => 150,
+			'priority'       => 130,
 		));
 
 		/*----------------------------------------------------------------------*/
