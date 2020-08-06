@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3cb5b61b-f6fe-47ae-ad2c-74b9da630ece" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/main.css" afterPath="$PROJECT_DIR$/css/main.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/functions.php" afterPath="$PROJECT_DIR$/functions.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/inc/customizer.php" afterPath="$PROJECT_DIR$/inc/customizer.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/our-services.php" afterPath="$PROJECT_DIR$/our-services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/style.css" afterPath="$PROJECT_DIR$/style.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,41 +14,12 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="our-services.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/our-services.php">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="224">
-              <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+            <state relative-caret-position="92">
+              <caret line="4" column="65" lean-forward="false" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="about.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/about.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="22" column="28" lean-forward="false" selection-start-line="22" selection-start-column="28" selection-end-line="22" selection-end-column="66" />
-              <folding>
-                <element signature="e#820#2687#0#PHP" expanded="false" />
-                <element signature="e#2710#4577#0#PHP" expanded="false" />
-                <element signature="e#4600#6467#0#PHP" expanded="false" />
-                <element signature="e#6490#8357#0#PHP" expanded="false" />
-                <element signature="e#8380#10247#0#PHP" expanded="false" />
-                <element signature="e#10270#12137#0#PHP" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="customizer.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/inc/customizer.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="327">
-              <caret line="261" column="45" lean-forward="false" selection-start-line="261" selection-start-column="45" selection-end-line="261" selection-end-column="45" />
-              <folding>
-                <marker date="1596740031341" expanded="true" signature="23153:23162" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -70,6 +37,7 @@
       <find>footer</find>
       <find>foo</find>
       <find>pagina</find>
+      <find>about us</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -94,6 +62,7 @@
         <option value="$PROJECT_DIR$/functions.php" />
         <option value="$PROJECT_DIR$/our-services.php" />
         <option value="$PROJECT_DIR$/inc/customizer.php" />
+        <option value="$PROJECT_DIR$/style.css" />
       </list>
     </option>
   </component>
@@ -279,12 +248,12 @@
       <workItem from="1595053701116" duration="327000" />
       <workItem from="1596398683444" duration="22887000" />
       <workItem from="1596557911335" duration="3820000" />
-      <workItem from="1596577889297" duration="26016000" />
+      <workItem from="1596577889297" duration="26239000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53050000" />
+    <option name="totallyTimeSpent" value="53273000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
@@ -634,6 +603,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/inc/customizer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="327">
+          <caret line="261" column="45" lean-forward="false" selection-start-line="261" selection-start-column="45" selection-end-line="261" selection-end-column="45" />
+          <folding>
+            <marker date="1596740031341" expanded="true" signature="23153:23162" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/about.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="232">
@@ -657,13 +636,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/inc/customizer.php">
+    <entry file="file://$PROJECT_DIR$/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="261" column="45" lean-forward="false" selection-start-line="261" selection-start-column="45" selection-end-line="261" selection-end-column="45" />
-          <folding>
-            <marker date="1596740031341" expanded="true" signature="23153:23162" ph="..." />
-          </folding>
+        <state relative-caret-position="92">
+          <caret line="4" column="65" lean-forward="false" selection-start-line="4" selection-start-column="65" selection-end-line="4" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
